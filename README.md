@@ -5,3 +5,6 @@ RBAC权限涉及采用casbin框架进行，学习资料： https://casbin.org/do
 
 管理api： https://casbin.org/docs/zh-CN/management-api
 RBAC api： https://casbin.org/docs/zh-CN/rbac-api
+
+
+# 简化了策略数据 和填写规范

@@ -20,20 +20,6 @@ func CheckLogin() gin.HandlerFunc {
 
 
 func RBAC() gin.HandlerFunc {
-	// 模型和策略进行持久化方式
-	//e := casbin.NewEnforcer("resources/model.conf", "resources/p.csv")
-	//adapter,err := gormadapter.NewAdapterByDB(Gorm)
-	//if err != nil {
-	//	log.Fatalln(err)
-	//}
-	//e,err := casbin.NewEnforcer("resources/model.conf", adapter)
-	//if err!=nil{
-	//	log.Fatal(err)
-	//}
-	//err = e.LoadPolicy()
-	//if err!=nil {
-	//	log.Fatal(err)
-	//}
 	return func(context *gin.Context) {
 		user,_:= context.Get("user_name")
 		access,err := E.Enforce(user,context.Request.RequestURI, context.Request.Method)
