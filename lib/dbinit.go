@@ -14,7 +14,8 @@ func initDB() {
 }
 
 func gormDB() *gorm.DB {
-	dsn := "user:password@tcp(192.168.x.x:3306)/cmdb?charset=utf8mb4&parseTime=True&loc=Local"
+	//dsn := "user:password@tcp(192.168.x.x:3306)/cmdb?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:adl1314520@tcp(42.193.154.221:3306)/rbac?charset=utf8mb4&parseTime=True&loc=Local"
 	db,err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 	if err != nil {
 		log.Fatalln(err)
